@@ -5,21 +5,21 @@
 class Nctl < Formula
   desc "Interact with Nine API resources."
   homepage "https://github.com/ninech/nctl"
-  version "1.0.0-test2"
+  version "1.0.0-test3"
   license "Apache 2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ninech/nctl/releases/download/v1.0.0-test2/nctl_1.0.0-test2_darwin_arm64.tar.gz"
-      sha256 "79bedb7e5d388dde4de34fd69e0bdcd3c10780b48b0105f3c32047f4e5e83b98"
+    if Hardware::CPU.intel?
+      url "https://github.com/ninech/nctl/releases/download/v1.0.0-test3/nctl_1.0.0-test3_darwin_amd64.tar.gz"
+      sha256 "706aecc521b5c8f176df991b89845d3f452d0ff5648354b16f010307834008ae"
 
       def install
         bin.install "nctl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ninech/nctl/releases/download/v1.0.0-test2/nctl_1.0.0-test2_darwin_amd64.tar.gz"
-      sha256 "8738cbbdd0726d8c2f66f7369178e02b569f05569b2de4a97446b4aee760ed55"
+    if Hardware::CPU.arm?
+      url "https://github.com/ninech/nctl/releases/download/v1.0.0-test3/nctl_1.0.0-test3_darwin_arm64.tar.gz"
+      sha256 "bff3932638cf816ff758974b306d712cc6d662997ff70f896c26ac8dce03a09d"
 
       def install
         bin.install "nctl"
@@ -29,16 +29,16 @@ class Nctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ninech/nctl/releases/download/v1.0.0-test2/nctl_1.0.0-test2_linux_arm64.tar.gz"
-      sha256 "47f9a70cb49d08a12a27a15be77c87a8e82971fc8a5079062e73c686fe3b612d"
+      url "https://github.com/ninech/nctl/releases/download/v1.0.0-test3/nctl_1.0.0-test3_linux_arm64.tar.gz"
+      sha256 "1f757a575cbb41df7f5bacf7915a34f4f50e08ab7086c25aa50a920a2df6b6b5"
 
       def install
         bin.install "nctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ninech/nctl/releases/download/v1.0.0-test2/nctl_1.0.0-test2_linux_amd64.tar.gz"
-      sha256 "14e8693a43d4d5fa21d646b7c1982ce10605afa3e90867a3541bf0e1907d3b8f"
+      url "https://github.com/ninech/nctl/releases/download/v1.0.0-test3/nctl_1.0.0-test3_linux_amd64.tar.gz"
+      sha256 "718c8507a6d5ce6f7495f1fc6631094ab7bcfe4cd3d1a7680e8928109295478d"
 
       def install
         bin.install "nctl"
