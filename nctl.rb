@@ -5,21 +5,21 @@
 class Nctl < Formula
   desc "Interact with Nine API resources."
   homepage "https://github.com/ninech/nctl"
-  version "1.1.0"
+  version "1.1.1"
   license "Apache 2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ninech/nctl/releases/download/v1.1.0/nctl_1.1.0_darwin_arm64.tar.gz"
-      sha256 "0a256236054e4e306e5bb44568643a0040616df942e4a2bcb7577c022b380b36"
+    if Hardware::CPU.intel?
+      url "https://github.com/ninech/nctl/releases/download/v1.1.1/nctl_1.1.1_darwin_amd64.tar.gz"
+      sha256 "92bcaff395611788b42fe8ccd416d8aef8bccfab53f57496fabe3eed5a6a6604"
 
       def install
         bin.install "nctl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ninech/nctl/releases/download/v1.1.0/nctl_1.1.0_darwin_amd64.tar.gz"
-      sha256 "1b30d89098d7888d18438fff066d9bc6e1704ea9e9264c6612bac75318f873cb"
+    if Hardware::CPU.arm?
+      url "https://github.com/ninech/nctl/releases/download/v1.1.1/nctl_1.1.1_darwin_arm64.tar.gz"
+      sha256 "cca5417b1427b2b15dfbaa3e48e88a0d73819b0a38c06327cc62bfbf2bdd9336"
 
       def install
         bin.install "nctl"
@@ -28,17 +28,17 @@ class Nctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ninech/nctl/releases/download/v1.1.0/nctl_1.1.0_linux_amd64.tar.gz"
-      sha256 "b61f42e4614b93018d01cb0f5e198f08fd4da1c80a20f6f82cf2cf0a6a996849"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ninech/nctl/releases/download/v1.1.1/nctl_1.1.1_linux_arm64.tar.gz"
+      sha256 "31025669c391bbde5cb5a9f310cda8302f22adff27a7147d81b72b52ee0ff79a"
 
       def install
         bin.install "nctl"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ninech/nctl/releases/download/v1.1.0/nctl_1.1.0_linux_arm64.tar.gz"
-      sha256 "6be355d5f078ebc67e17a3014533e4e3e04a757f443ac56fdbdc430aff5f81d0"
+    if Hardware::CPU.intel?
+      url "https://github.com/ninech/nctl/releases/download/v1.1.1/nctl_1.1.1_linux_amd64.tar.gz"
+      sha256 "486351c7d395a79f461ec384cd00b4c0da6b13a5ada2cdd5e74c9f9923b8ba3a"
 
       def install
         bin.install "nctl"
