@@ -11,7 +11,7 @@ class Nctl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ninech/nctl/releases/download/v1.2.1/nctl_1.2.1_darwin_amd64.tar.gz"
-      sha256 "e7de004d768c12548cb657780b7248cfab57081da4dc0acec3d446705135b3a1"
+      sha256 "e674b2984e4fd285e33b87ad12fbc5aceb752a8c4fc5cbc1b03f962756cd6fea"
 
       def install
         bin.install "nctl"
@@ -19,7 +19,7 @@ class Nctl < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ninech/nctl/releases/download/v1.2.1/nctl_1.2.1_darwin_arm64.tar.gz"
-      sha256 "919d669078976784392f1bd98225d611fe4fb76694b80c6e9d7c46b2d6794ce4"
+      sha256 "4faaf718798f7a86c35f9518735949267e0ea5e92490adc25f120a186ad12357"
 
       def install
         bin.install "nctl"
@@ -30,7 +30,7 @@ class Nctl < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ninech/nctl/releases/download/v1.2.1/nctl_1.2.1_linux_arm64.tar.gz"
-      sha256 "31f8b601a689b3fa22a665c48328ed7b450d290285e336abfcca023318400406"
+      sha256 "1225369ca73fea666373f5806e148d4c21a55a9740ac06224e1b47fd6d67c92a"
 
       def install
         bin.install "nctl"
@@ -38,7 +38,7 @@ class Nctl < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/ninech/nctl/releases/download/v1.2.1/nctl_1.2.1_linux_amd64.tar.gz"
-      sha256 "e28cd65906f68d66b0b7c69c543ce0c66d91a46715c54ef37fb5b59caffda231"
+      sha256 "657c9fe12e6eb1bc376759158ccd319e405417e5f5f86f0480d7b1d2b329ef23"
 
       def install
         bin.install "nctl"
