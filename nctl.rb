@@ -5,21 +5,21 @@
 class Nctl < Formula
   desc "Interact with Nine API resources."
   homepage "https://github.com/ninech/nctl"
-  version "1.2.5"
+  version "1.2.6"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ninech/nctl/releases/download/v1.2.5/nctl_1.2.5_darwin_arm64.tar.gz"
-      sha256 "d4a6257b74ac1ebe758d624d32fe2803e81ed42a73319ffd125a43085b76b313"
+      url "https://github.com/ninech/nctl/releases/download/v1.2.6/nctl_1.2.6_darwin_arm64.tar.gz"
+      sha256 "7e1d4fca9349b50c1c301db0d876f701da2d93fc959037472276a30ecc2c3f0f"
 
       def install
         bin.install "nctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ninech/nctl/releases/download/v1.2.5/nctl_1.2.5_darwin_amd64.tar.gz"
-      sha256 "d3ac9f66deae8b32154b961c436adccb3b83c88081d0f7f98d20daf671441b2b"
+      url "https://github.com/ninech/nctl/releases/download/v1.2.6/nctl_1.2.6_darwin_amd64.tar.gz"
+      sha256 "27e5f3a79a50106d6fdcb4072c2199c7fa41a092319cd419dfb7e80d7b7db52a"
 
       def install
         bin.install "nctl"
@@ -28,17 +28,17 @@ class Nctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ninech/nctl/releases/download/v1.2.5/nctl_1.2.5_linux_amd64.tar.gz"
-      sha256 "9443550cfb4423b0b0cece040e088f5b024f8460c7ef46880ec84704f5125b84"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ninech/nctl/releases/download/v1.2.6/nctl_1.2.6_linux_arm64.tar.gz"
+      sha256 "697408230d910a05e7d3f7cc7e166168d47b5eb2f74bcc14d258e353f0f2e303"
 
       def install
         bin.install "nctl"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ninech/nctl/releases/download/v1.2.5/nctl_1.2.5_linux_arm64.tar.gz"
-      sha256 "8326d2ec8fbaacbfabe6430ed59d48e405b59436bb4ab080c91c2f92b898da0e"
+    if Hardware::CPU.intel?
+      url "https://github.com/ninech/nctl/releases/download/v1.2.6/nctl_1.2.6_linux_amd64.tar.gz"
+      sha256 "723d6553caaa23275d0d5e0278586852d7fd90798e169ab7e40c9748d5ad809b"
 
       def install
         bin.install "nctl"
