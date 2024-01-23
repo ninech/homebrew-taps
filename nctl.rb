@@ -5,21 +5,21 @@
 class Nctl < Formula
   desc "Interact with Nine API resources."
   homepage "https://github.com/ninech/nctl"
-  version "1.2.6"
+  version "1.2.7"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ninech/nctl/releases/download/v1.2.6/nctl_1.2.6_darwin_arm64.tar.gz"
-      sha256 "7e1d4fca9349b50c1c301db0d876f701da2d93fc959037472276a30ecc2c3f0f"
+      url "https://github.com/ninech/nctl/releases/download/v1.2.7/nctl_1.2.7_darwin_arm64.tar.gz"
+      sha256 "82f78349e0edea55659c5bbeaea3c8c72d31ee1ad5574e6382dd961d57666ec8"
 
       def install
         bin.install "nctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ninech/nctl/releases/download/v1.2.6/nctl_1.2.6_darwin_amd64.tar.gz"
-      sha256 "27e5f3a79a50106d6fdcb4072c2199c7fa41a092319cd419dfb7e80d7b7db52a"
+      url "https://github.com/ninech/nctl/releases/download/v1.2.7/nctl_1.2.7_darwin_amd64.tar.gz"
+      sha256 "fa25ef121fd0945dca4a2d5f805e4f5250c3e15311c0fbc8d439802da5906dbd"
 
       def install
         bin.install "nctl"
@@ -29,16 +29,16 @@ class Nctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ninech/nctl/releases/download/v1.2.6/nctl_1.2.6_linux_arm64.tar.gz"
-      sha256 "697408230d910a05e7d3f7cc7e166168d47b5eb2f74bcc14d258e353f0f2e303"
+      url "https://github.com/ninech/nctl/releases/download/v1.2.7/nctl_1.2.7_linux_arm64.tar.gz"
+      sha256 "0a72b749e6288f27181f28b3982d12d3f9f5f531e0fd6e65d6273e423021b140"
 
       def install
         bin.install "nctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ninech/nctl/releases/download/v1.2.6/nctl_1.2.6_linux_amd64.tar.gz"
-      sha256 "723d6553caaa23275d0d5e0278586852d7fd90798e169ab7e40c9748d5ad809b"
+      url "https://github.com/ninech/nctl/releases/download/v1.2.7/nctl_1.2.7_linux_amd64.tar.gz"
+      sha256 "a0964ca9673d3837f26373b103e44f6d9f74b471108678872312d5edeb629f54"
 
       def install
         bin.install "nctl"
