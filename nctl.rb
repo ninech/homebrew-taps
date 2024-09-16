@@ -5,21 +5,21 @@
 class Nctl < Formula
   desc "Interact with Nine API resources."
   homepage "https://github.com/ninech/nctl"
-  version "1.7.3"
+  version "1.7.4"
   license "Apache 2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/ninech/nctl/releases/download/v1.7.3/nctl_1.7.3_darwin_amd64.tar.gz"
-      sha256 "ba518b972a323358ccefdbb55057f7730dd8826bd0312e4ca76136fbca615ebc"
+      url "https://github.com/ninech/nctl/releases/download/v1.7.4/nctl_1.7.4_darwin_amd64.tar.gz"
+      sha256 "2b8ab6d63cc1f7d8404583a76a1e8db3445ee70a6e8b239d2f68f337573f7665"
 
       def install
         bin.install "nctl"
       end
     end
     on_arm do
-      url "https://github.com/ninech/nctl/releases/download/v1.7.3/nctl_1.7.3_darwin_arm64.tar.gz"
-      sha256 "6145b2f968b7a66e6b45a131e7ad07bde8e00b2ca8749571edba964cf7c74be8"
+      url "https://github.com/ninech/nctl/releases/download/v1.7.4/nctl_1.7.4_darwin_arm64.tar.gz"
+      sha256 "a12bcce714070a74fb745550ee277d2e1b656c75ddfd8e7038329254333e8fe4"
 
       def install
         bin.install "nctl"
@@ -30,8 +30,8 @@ class Nctl < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ninech/nctl/releases/download/v1.7.3/nctl_1.7.3_linux_amd64.tar.gz"
-        sha256 "aa99ca437b5bb5c4a94a912afb272db8ce443e664b751a55baf65367f90a2fbb"
+        url "https://github.com/ninech/nctl/releases/download/v1.7.4/nctl_1.7.4_linux_amd64.tar.gz"
+        sha256 "eb5ff739b52e47b7849f47e6527a753757c1e2fc95768c42830242c91871b9fc"
 
         def install
           bin.install "nctl"
@@ -40,13 +40,22 @@ class Nctl < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ninech/nctl/releases/download/v1.7.3/nctl_1.7.3_linux_arm64.tar.gz"
-        sha256 "75e35389564b71de2747685f4a761b12ed39a173232d0613863e0b820ab493f0"
+        url "https://github.com/ninech/nctl/releases/download/v1.7.4/nctl_1.7.4_linux_arm64.tar.gz"
+        sha256 "e7b888af05bff736c70cb6c7b2249495444da0d26d935f2740297e53bd623284"
 
         def install
           bin.install "nctl"
         end
       end
     end
+  end
+
+  def post_install
+    File.write "nctl.bash", system("nctl", "completions", "-c", "bash")
+    File.write "nctl.zsh", system("nctl", "completions", "-c", "zsh")
+    File.write "nctl.fish", system("nctl", "completions", "-c", "fish")
+    bash_completion.install "nctl.bash"
+    zsh_completion.install "nctl.zsh"
+    fish_completion.install "nctl.fish"
   end
 end
