@@ -5,13 +5,13 @@
 class Nctl < Formula
   desc "Interact with Nine API resources."
   homepage "https://github.com/ninech/nctl"
-  version "1.7.5"
+  version "1.7.6"
   license "Apache 2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/ninech/nctl/releases/download/v1.7.5/nctl_1.7.5_darwin_amd64.tar.gz"
-      sha256 "3d624a3d89f0482aee24965db5410b948662a8960805252621431a6ee9d2eda1"
+      url "https://github.com/ninech/nctl/releases/download/v1.7.6/nctl_1.7.6_darwin_amd64.tar.gz"
+      sha256 "2a4ee68964b0a2999fc752ae7980f1b1e0aef9893a7a8c483f1c8a168440691d"
 
       def install
         bin.install "nctl"
@@ -21,8 +21,8 @@ class Nctl < Formula
       end
     end
     on_arm do
-      url "https://github.com/ninech/nctl/releases/download/v1.7.5/nctl_1.7.5_darwin_arm64.tar.gz"
-      sha256 "5f75182156d095efd09fcb8a14385fd799912ee7c5183e49c08a7c35d80cdbbb"
+      url "https://github.com/ninech/nctl/releases/download/v1.7.6/nctl_1.7.6_darwin_arm64.tar.gz"
+      sha256 "823785a4507fcdcd1d420f41a2278778ac57cc323663f1d1e3997f45a1d1c524"
 
       def install
         bin.install "nctl"
@@ -36,8 +36,8 @@ class Nctl < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ninech/nctl/releases/download/v1.7.5/nctl_1.7.5_linux_amd64.tar.gz"
-        sha256 "876530133bcd0001675f2de899059741db2da8307ad0f3e233744e19f1442513"
+        url "https://github.com/ninech/nctl/releases/download/v1.7.6/nctl_1.7.6_linux_amd64.tar.gz"
+        sha256 "2556e239bafb79847f4d9ce522d67ad1d8288fa768908df278932de79298ac63"
 
         def install
           bin.install "nctl"
@@ -49,8 +49,8 @@ class Nctl < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ninech/nctl/releases/download/v1.7.5/nctl_1.7.5_linux_arm64.tar.gz"
-        sha256 "01e3af4671e60a3c1c25d668e9a2e5b792a4e9f0cb3a6c8feee6541214626a74"
+        url "https://github.com/ninech/nctl/releases/download/v1.7.6/nctl_1.7.6_linux_arm64.tar.gz"
+        sha256 "e281d7689b371ad87d876720ffaf526b7a49b962c81daaf38c9ffdb0932c8431"
 
         def install
           bin.install "nctl"
