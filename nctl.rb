@@ -5,13 +5,13 @@
 class Nctl < Formula
   desc "Interact with Nine API resources."
   homepage "https://github.com/ninech/nctl"
-  version "1.8.5"
+  version "1.8.6"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ninech/nctl/releases/download/v1.8.5/nctl_1.8.5_darwin_amd64.tar.gz"
-      sha256 "ac14f268a6c6e0f3fad5f0ce111982f942467eeaa827498735643199fbf1b946"
+      url "https://github.com/ninech/nctl/releases/download/v1.8.6/nctl_1.8.6_darwin_amd64.tar.gz"
+      sha256 "9d7c6fd231257fcd4510a84e013ddbcd16525137b31568cb8bb5b7cec3a40f8f"
 
       def install
         bin.install "nctl"
@@ -21,8 +21,8 @@ class Nctl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ninech/nctl/releases/download/v1.8.5/nctl_1.8.5_darwin_arm64.tar.gz"
-      sha256 "b045981736db08e7da7212973d6763795c096f852a5a66b30cfdaae838ba9099"
+      url "https://github.com/ninech/nctl/releases/download/v1.8.6/nctl_1.8.6_darwin_arm64.tar.gz"
+      sha256 "d51c1276a04950e1ad2eabb44e1fc22b907f40290b97267c1d224b8bec89b921"
 
       def install
         bin.install "nctl"
@@ -36,8 +36,8 @@ class Nctl < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ninech/nctl/releases/download/v1.8.5/nctl_1.8.5_linux_amd64.tar.gz"
-        sha256 "98ee87847af6623b5bc50f7e625219bb6f5d0d110550e31f2fb25b365ec26c01"
+        url "https://github.com/ninech/nctl/releases/download/v1.8.6/nctl_1.8.6_linux_amd64.tar.gz"
+        sha256 "62a425a27a7790b3a284a630347a3c0f3bf83c87f0505c0161153a9eb5266826"
 
         def install
           bin.install "nctl"
@@ -49,8 +49,8 @@ class Nctl < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ninech/nctl/releases/download/v1.8.5/nctl_1.8.5_linux_arm64.tar.gz"
-        sha256 "b21bff0963721275fd1dea91254986fe0948ea8f4f1e7a21d62c526c3bf98920"
+        url "https://github.com/ninech/nctl/releases/download/v1.8.6/nctl_1.8.6_linux_arm64.tar.gz"
+        sha256 "e68340ce24b72390471fc781ef57a63824458774a49018054cc1029faf31fcdd"
 
         def install
           bin.install "nctl"
