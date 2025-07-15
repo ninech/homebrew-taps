@@ -5,13 +5,13 @@
 class Nctl < Formula
   desc "Interact with Nine API resources."
   homepage "https://github.com/ninech/nctl"
-  version "1.8.7"
+  version "1.9.0"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ninech/nctl/releases/download/v1.8.7/nctl_1.8.7_darwin_amd64.tar.gz"
-      sha256 "29b1cf5b3feeb5719d3e68174307f7b221dda2e69f8f5771f0d3ecc988b18972"
+      url "https://github.com/ninech/nctl/releases/download/v1.9.0/nctl_1.9.0_darwin_amd64.tar.gz"
+      sha256 "aa2b2794336a7cdfce16544ade5b40051bae1aa16fd52ee5bff4fab4a65962e1"
 
       def install
         bin.install "nctl"
@@ -21,8 +21,8 @@ class Nctl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ninech/nctl/releases/download/v1.8.7/nctl_1.8.7_darwin_arm64.tar.gz"
-      sha256 "ce43d4f040a713cf34aca92564b7aed1f174c9072a687919029e29fe2e1c2866"
+      url "https://github.com/ninech/nctl/releases/download/v1.9.0/nctl_1.9.0_darwin_arm64.tar.gz"
+      sha256 "7901a6f232474debd098b9a12c1968214b420b9551b95348b4d4e80a6ed1b20c"
 
       def install
         bin.install "nctl"
@@ -35,8 +35,8 @@ class Nctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ninech/nctl/releases/download/v1.8.7/nctl_1.8.7_linux_amd64.tar.gz"
-      sha256 "799687456bb45d6b38b40130e2f8c777af0b56f4210724ab628ea14313121431"
+      url "https://github.com/ninech/nctl/releases/download/v1.9.0/nctl_1.9.0_linux_amd64.tar.gz"
+      sha256 "a5a853ba77caa1586abb05175d792638e208d882e694c32902fa619b7739e525"
       def install
         bin.install "nctl"
         bash_completion.install "completions/nctl.bash" => "nctl"
@@ -45,8 +45,8 @@ class Nctl < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ninech/nctl/releases/download/v1.8.7/nctl_1.8.7_linux_arm64.tar.gz"
-      sha256 "c0e5829991c3a4c7733edde9ba4703ff361cca8ab8a48758d678fcbfb2ff6146"
+      url "https://github.com/ninech/nctl/releases/download/v1.9.0/nctl_1.9.0_linux_arm64.tar.gz"
+      sha256 "4cb68a45bf7b386707979f206dacb6e1122d834049bc79f8da8f5e01abdaae79"
       def install
         bin.install "nctl"
         bash_completion.install "completions/nctl.bash" => "nctl"
