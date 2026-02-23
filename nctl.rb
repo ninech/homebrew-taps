@@ -5,15 +5,15 @@
 class Nctl < Formula
   desc "Interact with Nine API resources."
   homepage "https://github.com/ninech/nctl"
-  version "1.13.1"
+  version "1.14.0"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ninech/nctl/releases/download/v1.13.1/nctl_1.13.1_darwin_amd64.tar.gz"
-      sha256 "042ae466c6bbd89d61eacb6c67393ed98477c523df5d616d1107e1164b6b0b28"
+      url "https://github.com/ninech/nctl/releases/download/v1.14.0/nctl_1.14.0_darwin_amd64.tar.gz"
+      sha256 "42d17eae662962baf330d6c76b9c5f29d135d1733b492cdcad1733c5b39a612a"
 
-      def install
+      define_method(:install) do
         bin.install "nctl"
         bash_completion.install "completions/nctl.bash" => "nctl"
         zsh_completion.install "completions/nctl.zsh" => "_nctl"
@@ -21,10 +21,10 @@ class Nctl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ninech/nctl/releases/download/v1.13.1/nctl_1.13.1_darwin_arm64.tar.gz"
-      sha256 "de9917ace5faca82ab1aefbc8b197c7f14f8e6281e115fce6091077fb0710c88"
+      url "https://github.com/ninech/nctl/releases/download/v1.14.0/nctl_1.14.0_darwin_arm64.tar.gz"
+      sha256 "3ae0de3aae51feec865c73af76a5e6d2abbbfe608f2aadd55d0faf9ef024326c"
 
-      def install
+      define_method(:install) do
         bin.install "nctl"
         bash_completion.install "completions/nctl.bash" => "nctl"
         zsh_completion.install "completions/nctl.zsh" => "_nctl"
@@ -35,9 +35,9 @@ class Nctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ninech/nctl/releases/download/v1.13.1/nctl_1.13.1_linux_amd64.tar.gz"
-      sha256 "bc99e76d200a6d333c455d389a63c9e38ed3260a69c52c8de19becd765bcec69"
-      def install
+      url "https://github.com/ninech/nctl/releases/download/v1.14.0/nctl_1.14.0_linux_amd64.tar.gz"
+      sha256 "869aa43c6ae2dcc3d88bd4b6fff4e2cfd753bacb1e932db17490f24635199a99"
+      define_method(:install) do
         bin.install "nctl"
         bash_completion.install "completions/nctl.bash" => "nctl"
         zsh_completion.install "completions/nctl.zsh" => "_nctl"
@@ -45,9 +45,9 @@ class Nctl < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ninech/nctl/releases/download/v1.13.1/nctl_1.13.1_linux_arm64.tar.gz"
-      sha256 "6f3ce19e9d605925db8e08064151fc66fc738242dea65b23ca72938221620644"
-      def install
+      url "https://github.com/ninech/nctl/releases/download/v1.14.0/nctl_1.14.0_linux_arm64.tar.gz"
+      sha256 "c0787981c52c29e3321ad02c7b0403c4057195c13bdff0b332e24b886e803f91"
+      define_method(:install) do
         bin.install "nctl"
         bash_completion.install "completions/nctl.bash" => "nctl"
         zsh_completion.install "completions/nctl.zsh" => "_nctl"
